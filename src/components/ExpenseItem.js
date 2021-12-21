@@ -1,6 +1,11 @@
+//// Here we are importing our css file
 import './ExpenseItem.css'
 
 function ExpenseItem(props) {
+
+    ////Here we are creating variables for these props so it looks cleaner below.
+    ////Props gets added as a parameter in the function. The props then grabs the date 
+
     const month = props.date.toLocaleString('en-US', {month: 'long'});
     const day = props.date.toLocaleString('en-US', {day: '2-digit'});
     const year = props.date.getFullYear();
