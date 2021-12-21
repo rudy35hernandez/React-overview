@@ -27,6 +27,7 @@ function App() {
     <div>
       <h1>Let's get started!</h1>
       <ExpenseItem
+      //// this tells ExpenseItem component which prop/object/arr it is using. It also tells it which exact object in arr
         title={expenses[0].title}
         amount={expenses[0].amount}
         date={expenses[0].date}
