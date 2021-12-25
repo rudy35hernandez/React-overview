@@ -6,7 +6,7 @@ import Card from "../UI/Card"
 //// Here we are importing our css file
 import "./ExpenseItem.css";
 
-function ExpenseItem(props) {
+const ExpenseItem = (props) => {
   //// Notice, we still use props but this time title because we're grabbing the title key from expenses
   const title = props.title;
   const amount = props.amount;

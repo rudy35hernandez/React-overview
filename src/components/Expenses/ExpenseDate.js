@@ -1,7 +1,7 @@
 import React from "react"
 import './ExpenseDate.css'
 
-function ExpenseDate(props){
+const ExpenseDate = (props) => {
 
     ////Here we are creating variables for these props so it looks cleaner below.
     ////Props gets added as a parameter in the function. The props then grabs the key in expenses object from app.js
