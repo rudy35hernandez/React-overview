@@ -8,12 +8,16 @@ import "./ExpenseItem.css";
 
 const ExpenseItem = (props) => {
   /////// A react hook //////////
+  //// We use, useState (built in method). The useState will take in the variable you want to manipulate
+  //// useState creates an array of ONLY TWO elements, first being the original value, second being what you want
+  //// that value to change to. Here, we are using desconstruction.
+
   const [title, setTitle] = useState(props.title);
 
-  //// Notice, we still use props but this time title because we're grabbing the title key from expenses
   
- 
+ //// Here we create our function that will help us change the state of our element.
   const clickHandler = () => {
+    /// We declare the value for our 2nd element here, by calling on it, with the parameter being our value.
     setTitle("New Title")
     console.log(title);
   };
