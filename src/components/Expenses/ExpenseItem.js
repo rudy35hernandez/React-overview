@@ -8,13 +8,13 @@ import "./ExpenseItem.css";
 
 const ExpenseItem = (props) => {
   /////// A react hook //////////
-  useState(props.title);
+  const [title, setTitle] = useState(props.title);
 
   //// Notice, we still use props but this time title because we're grabbing the title key from expenses
-  let title = props.title;
-  const amount = props.amount;
+  
+ 
   const clickHandler = () => {
-    title = "Updated";
+    setTitle("New Title")
     console.log(title);
   };
 
@@ -23,7 +23,7 @@ const ExpenseItem = (props) => {
       <ExpenseDate date={props.date} />
       <div className="expense-item__description">
         <h2>{title}</h2>
-        <div className="expense-item__price">$ {amount}</div>
+        <div className="expense-item__price">$ {props.amount}</div>
       </div>
       <button onClick={clickHandler}>Change Title</button>
     </Card>
