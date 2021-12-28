@@ -11,14 +11,14 @@ const ExpenseItem = (props) => {
   //// We use, useState (built in method). The useState will take in the variable you want to manipulate
   //// useState creates an array of ONLY TWO elements, first being the original value, second being what you want
   //// that value to change to. Here, we are using desconstruction.
-
+  const newState = "Updated!!!"
   const [title, setTitle] = useState(props.title);
 
   
  //// Here we create our function that will help us change the state of our element.
   const clickHandler = () => {
     /// We declare the value for our 2nd element here, by calling on it, with the parameter being our value.
-    setTitle("New Title")
+    setTitle(newState)
     console.log(title);
   };
 
