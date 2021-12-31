@@ -38,7 +38,12 @@ const Expenseform = () => {
       date: new Date(enteredDate),
     };
 
+    ////We include the code below to reset the forms back to blank once we submit the form. The state for each 
+    ////just goes back to its original state, blank.
     console.log(expenseData)
+    setEnteredTitle('')
+    setEnteredDate('')
+    setEnteredAmount('')
   };
 
   return (
@@ -46,7 +51,11 @@ const Expenseform = () => {
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label>Title</label>
-          <input type="text" onChange={titleChangeHandler} />
+          <input type="text" 
+          value={enteredTitle} 
+          /// We want to set the value to each section blank, that way when we run the submitHandler func,
+            /// we return the state of each form back to blank
+          onChange={titleChangeHandler} />
         </div>
         <div className="new-expense__control">
           <label>Amount</label>
@@ -54,6 +63,9 @@ const Expenseform = () => {
             type="number"
             min="0.01"
             step="0.01"
+            /// We want to set the value to each section blank, that way when we run the submitHandler func,
+            /// we return the state of each form back to blank
+            value={enteredAmount}
             onChange={amountChangedHandler}
           />
         </div>
@@ -63,6 +75,7 @@ const Expenseform = () => {
             type="date"
             min="2021-01-01"
             step="2022-12-31"
+            value={enteredDate}
             onChange={dateChangedHandler}
           />
         </div>
