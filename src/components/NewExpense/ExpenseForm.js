@@ -29,7 +29,9 @@ const Expenseform = () => {
   };
 
   const submitHandler = (event) => {
+    //// Code below prevents page from reloading, this is a built in React function
     event.preventDefault();
+    ////////////////////
     const expenseData = {
       title: enteredTitle,
       amount: enteredAmount,
