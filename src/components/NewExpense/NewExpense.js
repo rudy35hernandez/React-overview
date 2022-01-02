@@ -8,15 +8,22 @@ import './NewExpense.css'
 /// onSaveExpenseData, this is the prop we're creating, a function that will eventually be triggered when something
 /// happens in this component, in this case, when the user saves
 
-const NewExpense = () => {
+const NewExpense = (props) => {
 
-  const onSaveExpenseData
+  const saveExpenseDataHandler = (enteredExpenseData) => {
+    const expenseData = {
+      ...enteredExpenseData,
+      id: Math.random().toString()
+    }
+    props.onAddExpense(expenseData)
+  }
 
   return (
     <div className="new-expense">
-     <ExpenseForm onSaveExpenseData/>
+     <ExpenseForm onSaveExpenseData={saveExpenseDataHandler}/>
     </div>
   );
+
 };
 
 export default NewExpense;

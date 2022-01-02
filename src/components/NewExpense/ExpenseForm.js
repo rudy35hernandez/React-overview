@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import "./ExpenseForm.css";
 
-const Expenseform = () => {
+const Expenseform = (props) => {
   //// creating our useState, setEnteredTitle will be used at function below
   const [enteredTitle, setEnteredTitle] = useState("");
 
@@ -40,7 +40,7 @@ const Expenseform = () => {
 
     ////We include the code below to reset the forms back to blank once we submit the form. The state for each 
     ////just goes back to its original state, blank. I think this is called 2way binding
-    console.log(expenseData)
+    props.onSaveExpenseData(expenseData);
     setEnteredTitle('')
     setEnteredDate('')
     setEnteredAmount('')
