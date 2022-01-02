@@ -21,6 +21,7 @@ const ExpenseItem = (props) => {
     setTitle(newState)
     console.log(title);
   };
+  /// onClick, onChange, these are all react built in methods. 
 
   return (
     <Card className="expense-item">
