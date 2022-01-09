@@ -41,6 +41,9 @@ const Expenseform = (props) => {
 
     ////We include the code below to reset the forms back to blank once we submit the form. The state for each 
     ////just goes back to its original state, blank. I think this is called 2way binding
+
+    //// props.onSaveExpenseData gets picked up by NewExpense. This is how they communicate. expenseData is passed
+    /// in this as well to share the data the user typed in
     props.onSaveExpenseData(expenseData);
     setEnteredTitle('')
     setEnteredDate('')
