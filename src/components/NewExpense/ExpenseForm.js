@@ -5,14 +5,21 @@ import "./ExpenseForm.css";
 const Expenseform = () => {
 
     
-
+    //// creating our useState, setEnteredTitle will be used at function below
     const [enteredTitle, setEnteredTitle] = useState('')
 
     const [enteredAmount, setEnteredAmount] = useState('')
 
     const [enteredDate, setEnteredDate] = useState('')
     
+
+    /// Here we are adding event listener function. Everytime we type something, React creates an object,
+    /// we use our google tool. When we console log tool, we get an object, we look for target, and in that
+    /// object, theres a value. This value is what we're typing!
+
     const titleChangeHandler = (event) => {
+        //// setEnteredTitle, we use the paranthesis to add the value of setEnteredTitle, in this case,
+        //// whatever we type
        setEnteredTitle(event.target.value)
     }
 
